@@ -42,6 +42,12 @@ config MACH_MX51_BABBAGE
 	  u-boot. This includes specific configurations for the board and its
 	  peripherals.
 
+config MACH_MX51_EFIKA
+	bool "Support Genesi Efika MX platforms"
+	select ARCH_MX51
+	help
+	  Include support for the Genesi EfikaMX platforms.
+
 config MACH_MX53_EVK
 	bool "Support MX53 EVK platform"
 	select ARCH_MX53
