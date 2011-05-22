@@ -142,6 +142,7 @@ static __init void mx51_efika_fixup(struct machine_desc *desc, struct tag *tags,
 
 static __init void mx51_efika_init_machine(void)
 {
+	mxc_cpu_common_init();
 }
 
 MACHINE_START(MX51_EFIKA, "Genesi EfikaMX")
