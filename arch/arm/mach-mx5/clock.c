@@ -4506,7 +4506,7 @@ static void clk_tree_init(void)
 	}
 }
 
-
+#ifdef CONFIG_ARCH_MX51
 int __init mx51_clocks_init(unsigned long ckil, unsigned long osc, unsigned long ckih1, unsigned long ckih2)
 {
 	__iomem void *base;
@@ -4818,7 +4818,7 @@ int __init mx51_clocks_init(unsigned long ckil, unsigned long osc, unsigned long
 	mxc_timer_init(&gpt_clk[0], base, MXC_INT_GPT);
 	return 0;
 }
-
+#else
 int __init mx53_clocks_init(unsigned long ckil, unsigned long osc, unsigned long ckih1, unsigned long ckih2)
 {
 	__iomem void *base;
@@ -5082,7 +5082,7 @@ int __init mx53_clocks_init(unsigned long ckil, unsigned long osc, unsigned long
 	mxc_timer_init(&gpt_clk[0], base, MXC_INT_GPT);
 	return 0;
 }
-
+#endif
 /*!
  * Setup cpu clock based on working point.
  * @param	wp	cpu freq working point
