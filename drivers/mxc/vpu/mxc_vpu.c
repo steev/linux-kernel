@@ -37,6 +37,7 @@
 #include <linux/io.h>
 #include <linux/slab.h>
 #include <linux/workqueue.h>
+#include <linux/sched.h>
 
 #include <asm/sizes.h>
 #include <mach/clock.h>
